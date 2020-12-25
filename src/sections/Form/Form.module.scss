@@ -1,21 +1,201 @@
-@media screen and (max-width: 375px) {
-  .container {
-    font-family: 'Source Sans Pro', sans-serif;
-    box-sizing: border-box;
-    padding: 62px 16px;
+.container {
+  font-family: 'Source Sans Pro', sans-serif;
+  box-sizing: border-box;
+  padding: 62px 16px;
+}
+
+.title {
+  font-weight: 500;
+  font-size: 40px;
+  line-height: 38px;
+  margin-bottom: 40px;
+}
+
+.subtitle {
+  font-weight: 600;
+  font-size: 22px;
+  line-height: 38px;
+  margin-bottom: 24px;
+}
+
+.personalInfo {
+  margin-bottom: 40px;
+}
+
+.sex {
+  margin-bottom: 40px;
+}
+
+.gitHub {
+  margin-bottom: 48px;
+}
+
+.field {
+  margin-bottom: 24px;
+
+}
+
+.fieldTitle {
+  font-size: 14px;
+  line-height: 22px;
+  font-weight: normal;
+  margin-bottom: 2px;
+}
+
+.fieldInput {
+  width: 100%;
+  padding: 8px 12px;
+  border: 1px solid #D9D9D9;
+  border-radius: 2px;
+
+  &::placeholder {
+    font-size: 16px;
+    line-height: 24px;
+    color: #BFBFBF;
   }
 
-  .title {
-    font-weight: 500;
-    font-size: 40px;
-    line-height: 38px;
-    margin-bottom: 40px;
+}
+
+.fieldInputError {
+  @extend .fieldInput;
+  border: 1px solid #F5222D;
+  box-shadow: 0 0 4px rgba(245, 34, 45, 0.5);
+
+  &:focus {
+    outline: none;
+  }
+}
+
+.fieldInputGitHub {
+  @extend .fieldInput;
+  width: 256px;
+
+}
+
+.button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  padding: 10px 0;
+  border: 1px dashed #D9D9D9;
+  border-radius: 2px;
+  font-size: 14px;
+  line-height: 22px;
+  color: #595959;
+}
+
+.icon {
+  width: 23px;
+  height: 23px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-right: 50px;
+
+  i {
+    font-size: 22px;
+    line-height: 1;
+    color: #8C8C8C;
+  }
+}
+
+.sexField {
+  margin-right: 40px;
+
+}
+
+.sexLabel {
+  margin-left: 8px;
+  color: #595959;
+  font-size: 14px;
+  line-height: 22px;
+
+}
+
+.political {
+  margin-bottom: 40px;
+}
+
+.politicalLabel {
+  margin-left: 8px;
+  font-size: 14px;
+  font-weight: normal;
+  line-height: 22px;
+  color: #595959;
+
+  button {
+    padding: 0;
+    background-color: transparent;
+    border: none;
+    text-decoration: underline;
+    color: #2F80ED;
+  }
+}
+
+.submitButton {
+  display: flex;
+  justify-content: center;
+  padding: 8px 0;
+  align-items: center;
+  width: 100%;
+  border: 1px solid #D9D9D9;
+  border-radius: 2px;
+  background-color: #1890FF;
+  color: #fff;
+
+  &:disabled {
+    background-color: #E8E8E8;
+    color: #BCBCBC;
+  }
+
+}
+
+.errorMessage {
+  color: #F5222D;
+  font-size: 14px;
+  line-height: 22px;
+}
+
+@media screen and (min-width: 928px){
+  .container {
+    padding: 120px 20px;
+  }
+
+  .personalInfo {
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  .field {
+    margin-right: 80px;
+  }
+
+  .fieldInput {
+    min-width: 256px;
   }
 
   .subtitle {
-    font-weight: 600;
-    font-size: 22px;
-    line-height: 38px;
-    margin-bottom: 24px;
+    width: 100%;
   }
+
+  .button {
+    justify-content: left;
+    padding: 0 8px;
+    width: 256px;
+    height: 42px;
+  }
+
+  .buttonWrapper {
+    display: flex;
+    align-items: center;
+  }
+
+  .submitButton {
+    max-width: 360px;
+    max-height: 40px;
+  }
+
+
+
 }

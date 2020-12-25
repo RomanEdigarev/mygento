@@ -1,24 +1,19 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React, {useState} from 'react';
+import './App.module.css';
+import Form from "./sections/Form/Form";
+import Modal from "./sections/Form/components/Modals/SubmitModal/Modal";
+import style from './App.module.css'
+import PoliticalModal from "./sections/Form/components/Modals/PoliticalModal/PoliticalModal";
 
 function App() {
+  const [showModal, setShowModal] = useState(false)
+  const [showPoliticalModal, setShowPoliticalModal] = useState(false)
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className={style.app}>
+      <Form setShowModal={setShowModal} setShowPoliticalModal={setShowPoliticalModal}/>
+      <Modal showModal={showModal} setShowModal={setShowModal}/>
+      <PoliticalModal showPoliticalModal={showPoliticalModal} setShowPoliticalModal={setShowPoliticalModal}/>
     </div>
   );
 }
