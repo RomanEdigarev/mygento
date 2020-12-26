@@ -8,18 +8,18 @@
   position: fixed;
   top: 0;
   left: 0;
-  z-index: 1;
+  z-index: -1;
   color: #262626;
-  display: none;
   opacity: 0;
+  display: flex;
   transition: all 0.3s ease-in-out;
-
 }
 
-
-.container.show {
+.container {
+  &.show {
+    z-index: 10;
     opacity: 1;
-    display: flex;
+  }
 }
 
 .content {
@@ -29,12 +29,19 @@
   flex-direction: column;
   align-items: center;
   width: 100%;
+  max-width: 547px;
   height: 204px;
   text-align: center;
   vertical-align: center;
   border-radius: 4px;
   box-shadow: 0 2px 10px rgba(0, 0, 0, 0.23);
   background-color: #fff;
+  transition: all 0.3s ease-in-out;
+  transform: translate(0%, -50%);
+
+  &.show {
+    transform: translate(0, 0);
+  }
 }
 
 .title {
@@ -62,6 +69,11 @@
   font-weight: 300;
   font-size: 16px;
   line-height: 24px;
+  transition: all 0.3s ease-in-out;
+
+  &:hover {
+    cursor: pointer;
+  }
 }
 
 .contentPoliticalModal {
@@ -97,6 +109,10 @@
   background-color: transparent;
   border: none;
 
+  &:hover {
+    cursor: pointer;
+  }
+
   span {
     color: #2F80ED;
   }
@@ -106,7 +122,6 @@
 @media screen and (min-width: 928px) {
   .content {
     padding: 40px;
-    max-width: 547px;
     min-height: 244px;
   }
 
@@ -120,7 +135,7 @@
 
   .contentPoliticalModal {
     max-width: 758px;
-    min-height: 800px;
+    min-height: 700px;
     padding: 48px;
   }
 

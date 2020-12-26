@@ -83,6 +83,10 @@
   font-size: 14px;
   line-height: 22px;
   color: #595959;
+
+  &:hover {
+    cursor: pointer;
+  }
 }
 
 .icon {
@@ -103,6 +107,11 @@
 .sexField {
   margin-right: 40px;
 
+  input {
+    &:hover {
+      cursor: pointer;
+    }
+  }
 }
 
 .sexLabel {
@@ -130,6 +139,10 @@
     border: none;
     text-decoration: underline;
     color: #2F80ED;
+
+    &:hover {
+      cursor: pointer;
+    }
   }
 }
 
@@ -144,6 +157,10 @@
   background-color: #1890FF;
   color: #fff;
 
+  &:hover {
+    cursor: pointer;
+  }
+
   &:disabled {
     background-color: #E8E8E8;
     color: #BCBCBC;
@@ -152,12 +169,13 @@
 }
 
 .errorMessage {
+  position: absolute;
   color: #F5222D;
   font-size: 14px;
   line-height: 22px;
 }
 
-@media screen and (min-width: 928px){
+@media screen and (min-width: 928px) {
   .container {
     padding: 120px 20px;
   }
@@ -169,10 +187,11 @@
 
   .field {
     margin-right: 80px;
+    margin-bottom: 48px;
   }
 
   .fieldInput {
-    min-width: 256px;
+    width: 256px;
   }
 
   .subtitle {
@@ -184,18 +203,26 @@
     padding: 0 8px;
     width: 256px;
     height: 42px;
+
+    &:hover {
+      cursor: pointer;
+    }
+
   }
 
   .buttonWrapper {
+    padding-top: 22px;
     display: flex;
-    align-items: center;
   }
 
   .submitButton {
     max-width: 360px;
     max-height: 40px;
-  }
 
+    &:hover {
+      cursor: pointer;
+    }
+  }
 
 
 }
