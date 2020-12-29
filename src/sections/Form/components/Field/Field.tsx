@@ -5,7 +5,7 @@ type Props = {
     title: string
     id?: string
     name: string,
-    type: 'text' | 'checkbox' | 'radio'
+    type: 'text' | 'checkbox' | 'radio' | 'email'
     placeHolder?: string,
     register: any
     required?: boolean,
@@ -37,8 +37,8 @@ const Field: FC<Props> = (
     )
 
     const displayErrorPattern = (name === 'email' ?
-            <span className={style.errorMessage}>Некорректный email</span> :
-            <span className={style.errorMessage}>Здесь могут быть только буквы</span>
+            <div className={style.errorMessage}>Некорректный email</div> :
+            <div className={style.errorMessage}>Здесь могут быть только русские буквы</div>
     )
 
     return (

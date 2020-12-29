@@ -1,0 +1,98 @@
+.downloadedFileName {
+  max-height: 22px;
+  max-width: 256px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 306px;
+  background-color: transparent;
+  margin: 22px 80px 48px 0;
+  transition: all 0.3s ease-in-out;
+
+  div {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  span {
+    font-size: 14px;
+    color: #1890FF;
+  }
+
+  i {
+    color: #8C8C8C;
+    margin-right: 10px;
+    font-size: 18px;
+  }
+
+  &:hover {
+    cursor: pointer;
+    background-color: #E6F7FF;
+  }
+
+}
+
+.buttonWrapper {
+  padding-top: 22px;
+  display: flex;
+}
+
+.buttonInput {
+  display: none;
+}
+
+.button {
+  position: relative;
+  background-color: #F5F5F5;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  padding: 10px 0;
+  border: 1px dashed #D9D9D9;
+  border-radius: 2px;
+  font-size: 14px;
+  line-height: 22px;
+  color: #595959;
+
+  &:hover {
+    cursor: pointer;
+  }
+
+}
+
+.icon {
+  position: absolute;
+  left: 52px;
+  width: 23px;
+  height: 23px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  i {
+    font-size: 28px;
+    line-height: 1;
+    color: #8C8C8C;
+  }
+}
+
+@media screen and (min-width: 928px) {
+
+  .button {
+    justify-content: left;
+    padding: 0 8px;
+    width: 256px;
+    height: 42px;
+
+    &:hover {
+      cursor: pointer;
+    }
+  }
+
+  .icon {
+    position: static;
+    margin-right: 50px;
+  }
+}

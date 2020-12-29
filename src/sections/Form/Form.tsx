@@ -1,8 +1,9 @@
-import React, {Dispatch, FC} from 'react';
+import React, {ChangeEvent, Dispatch, FC, useState} from 'react';
 import {useForm} from 'react-hook-form'
 import Field from "./components/Field/Field";
 import style from './Form.module.scss'
 import RadioField from "./components/RadioField/RadioField";
+import FileField from "./components/FileField/FileField";
 
 type Inputs = {
     firstName: string,
@@ -19,9 +20,16 @@ type Props = {
     setName: Dispatch<string>
 }
 const Form: FC<Props> = ({setShowModal, setShowPoliticalModal, setName}) => {
+    const [fileName, setFileName] = useState<string>('')
+
     const {register, handleSubmit, errors, setValue, watch, reset} = useForm<Inputs>({
         mode: 'onBlur'
     })
+
+    const deletePortfolioFile = () => {
+        setFileName('')
+    }
+
     const onSubmit = (data: Inputs) => {
         setName(data.firstName)
         setShowModal(true)
@@ -66,7 +74,7 @@ const Form: FC<Props> = ({setShowModal, setShowPoliticalModal, setName}) => {
                     />
 
                     <Field name={'email'}
-                           type={'text'}
+                           type={'email'}
                            title={'Электронная почта'}
                            placeHolder={'Электронная почта'}
                            register={register}
@@ -75,14 +83,11 @@ const Form: FC<Props> = ({setShowModal, setShowPoliticalModal, setName}) => {
                            pattern={/^[A-Z0-9._%+-]+@[A-Z0-9-]+.+.[A-Z]{2,4}$/i}
                     />
 
-                    <div className={style.buttonWrapper}>
-                        <button type="button" className={style.button}>
-                            <div className={style.icon}>
-                                <i className="material-icons md-18 md-dark md-inactive">add</i>
-                            </div>
-                            Загрузить резюме
-                        </button>
-                    </div>
+                    <FileField
+                        fileName={fileName}
+                        setFileName={setFileName}
+                        deletePortfolioFile={deletePortfolioFile}
+                    />
 
                 </div>
 
@@ -127,18 +132,19 @@ const Form: FC<Props> = ({setShowModal, setShowPoliticalModal, setName}) => {
                     <label htmlFor="political"
                            className={style.politicalLabel}>* Я согласен c&nbsp;
                         <span>
-              <button type={'button'} onClick={openPoliticalModal}>политикой конфиденциальности</button>
-            </span>
+                            <button type={'button'} onClick={openPoliticalModal}>политикой конфиденциальности</button>
+                        </span>
                     </label>
                 </div>
 
 
                 <button
-                    className={style.submitButton} type={'submit'}
-                    disabled={!(Object.values(watch()).every(val => val) &&
-                        Object.keys(watch()).length > 0 &&
-                        Object.keys(errors).length === 0)}>
-                    Отправить
+                    className={
+                        !(Object.values(watch()).every(val => val) && Object.keys(watch()).length > 0 && Object.keys(errors).length === 0) ?
+                            style.submitButtonDisabled : style.submitButton
+                    }
+                    type={'submit'}>
+                    <span>Отправить</span>
                 </button>
             </form>
 
