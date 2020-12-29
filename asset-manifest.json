@@ -1,20 +1,20 @@
 {
   "files": {
-    "main.css": "/mygento/static/css/main.e3ca7c2e.chunk.css",
-    "main.js": "/mygento/static/js/main.6c9e1c3e.chunk.js",
-    "main.js.map": "/mygento/static/js/main.6c9e1c3e.chunk.js.map",
+    "main.css": "/mygento/static/css/main.3f731fa4.chunk.css",
+    "main.js": "/mygento/static/js/main.524d63dc.chunk.js",
+    "main.js.map": "/mygento/static/js/main.524d63dc.chunk.js.map",
     "runtime-main.js": "/mygento/static/js/runtime-main.b6cdea64.js",
     "runtime-main.js.map": "/mygento/static/js/runtime-main.b6cdea64.js.map",
-    "static/js/2.ef6a3918.chunk.js": "/mygento/static/js/2.ef6a3918.chunk.js",
-    "static/js/2.ef6a3918.chunk.js.map": "/mygento/static/js/2.ef6a3918.chunk.js.map",
+    "static/js/2.33924dcb.chunk.js": "/mygento/static/js/2.33924dcb.chunk.js",
+    "static/js/2.33924dcb.chunk.js.map": "/mygento/static/js/2.33924dcb.chunk.js.map",
     "index.html": "/mygento/index.html",
-    "static/css/main.e3ca7c2e.chunk.css.map": "/mygento/static/css/main.e3ca7c2e.chunk.css.map",
-    "static/js/2.ef6a3918.chunk.js.LICENSE.txt": "/mygento/static/js/2.ef6a3918.chunk.js.LICENSE.txt"
+    "static/css/main.3f731fa4.chunk.css.map": "/mygento/static/css/main.3f731fa4.chunk.css.map",
+    "static/js/2.33924dcb.chunk.js.LICENSE.txt": "/mygento/static/js/2.33924dcb.chunk.js.LICENSE.txt"
   },
   "entrypoints": [
     "static/js/runtime-main.b6cdea64.js",
-    "static/js/2.ef6a3918.chunk.js",
-    "static/css/main.e3ca7c2e.chunk.css",
-    "static/js/main.6c9e1c3e.chunk.js"
+    "static/js/2.33924dcb.chunk.js",
+    "static/css/main.3f731fa4.chunk.css",
+    "static/js/main.524d63dc.chunk.js"
   ]
 }
